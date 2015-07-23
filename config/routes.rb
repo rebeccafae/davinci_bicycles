@@ -6,4 +6,9 @@ Rails.application.routes.draw do
 
   post 'bikes' => 'bikes#create'
 
+  get 'bikes/:id/edit' => 'bikes#edit', as: 'edit_bike'
+
+  get 'bikes/:id' => 'bikes#show', as: 'bike'
+
+  patch 'bikes/:id' => 'bikes#update'
 end
