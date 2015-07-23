@@ -1,1 +1,23 @@
 <%= link_to 'New Bike', new_bike_path %>
+
+<table id='bikes_table'>
+  <thead>
+  <tr>
+    <th>Style</th>
+    <th>Year</th>
+    <th>Brand</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @bikes.each do |bike| %>
+      <tr>
+        <td><%= bike.style %></td>
+        <td><%= bike.year %></td>
+        <td><%= bike.brand %></td>
+        <td><%= number_to_currency(bike.price) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

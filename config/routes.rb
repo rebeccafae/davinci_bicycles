@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'bikes/new' => 'bikes#new', as: 'new_bike'
 
   post 'bikes' => 'bikes#create'
+
 end
