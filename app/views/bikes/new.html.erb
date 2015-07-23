@@ -1,0 +1,23 @@
+<h2>New Bike</h2>
+
+<%= form_for(@bike) do |f| %>
+  <p>
+    <%= f.label :style, 'Style (Road, Mountain, etc)' %>
+    <%= f.text_field :style %>
+  </p>
+  <p>
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </p>
+  <p>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
